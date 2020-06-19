@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>hw3</title>
+    
+      
+</head>
+<body>
+    <script>
+// 1. Сделать собственные примеры методов применяемых для массивов.
+
+// Метод pop() - удаляет последний элемент из массива и возвращает удаленное значение.
+    var plants = ['broccoli', 'cauliflower', 'cabbage'];
+    console.log(plants.pop());//cabbage
+    console.log(plants);
+// Метод shift() удаляет первый элемент из массива и возвращает удаленное значение.
+    var myArray = ['clown', 'mandarin', 'surgeon'];
+    var shifted = myArray.shift(); 
+    console.log(shifted); //clown
+    console.log(myArray);
+// Метод push() - добавляет элементы в конец массива и возвращает его новую длину.
+    var animals = ['pigs', 'goats', 'sheep'];
+    var count = animals.push('cows');
+    console.log(count);//4
+    console.log(animals);
+// Метод unshift() - добавляет элементы в начало массива и возвращает его новую длину.
+    var array1 = [1, 2, 3];
+    var count = array1.unshift(4, 5, 8);
+    console.log(count);//6
+    console.log(array1);
+// Метод sort() - cортирует элементы массива в алфавитном порядке.
+    var months = ['March', 'Jan', 'Feb', 'Dec'];
+    months.sort();
+    console.log(months);//["Dec", "Feb", "Jan", "March"]
+// Метод splice() - универсальный метод для вставки и удаления элементов из массива. 
+// Метод возвращает массив из удаленных элементов.
+    var months2 = ['Jan', 'March', 'April', 'June'];
+    months2.splice(4, 1, 'May');//replaces 1 element at index 4
+    console.log(months2);//["Jan", "Feb", "March", "April", "May"]
+    months2.splice(1, 0, 'Feb');//inserts at index 1
+    console.log(months2);//["Jan", "Feb", "March", "April", "June"]
+// Метод slice() - возвращает часть массива из указанного массива.
+    var animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+    console.log(animals.slice(1, 3));//["bison", "camel"]
+// Метод reverse() - меняет порядок следования элементов массива на противоположный.
+    var array1 = ['one', 'two', 'three'];
+    console.log('array1:', array1);//["one", "two", "three"]
+    var reversed = array1.reverse();
+    console.log('reversed:', reversed);
+// Метод concat() - дополняет элементы массива указанными элементами в параметрах.
+    var array1 = ['a', 'b', 'c'];
+    var array2 = ['d', 'e'];
+    var array3 = array1.concat(array2);
+    console.log(array3);//["a", "b", "c", "d", "e"]
+// Метод Join() - объединяет все элементы массива в одну строку. 
+    var elements = ['Fire', 'Air', 'Water'];
+    console.log(elements.join('-'));//Fire-Air-Water
+
+
+// 2. Создать программу, выполняющую вставку элемента в массив после элемента, значение которого укажет пользователь.
+        
+    var myArray = ["Subaru", "Volvo", "BMW", "Ford", "Skoda", "Lexus", "Honda", "Жигули"];
+    console.log(myArray.length);
+    var znachenie = +prompt("vveddite znachenie");//3
+    var chto = prompt("vvedite element");// car
+    myArray.splice(znachenie, 0, chto);//0 - nichego ne ydalaem //car[3]
+    if (znachenie < myArray.length){
+        console.log(myArray);//["Subaru", "Volvo", "BMW", "car", "Ford", "Skoda", "Lexus", "Honda", "Жигули"] 
+    }
+    else{
+        console.log("vvedite znachenie menshe dlinu masiva");
+    }
+     
+      
+// 3. Создать многомерный массив, размер массива получить от пользователя. Каждый нечётный подмассив заполнить значением 'odd', а чётный - 'even'. Размер каждого вложенного массива - 3.
+   
+    var myArray = [];
+    rows = +prompt("vvedite razmer masiva (rows): ");
+    for (var i = 0; i < rows; i++) {
+    myArray[i] = []; // sozdaem podmasiv 
+        for (var j = 0; j < 3; j++) {// razmer podmasiva = 3
+            if (i % 2 == 0) {
+                myArray[i][j] = "even"; // zapolnaem podmasiv textom
+            } 
+            else {
+                myArray[i][j] = "odd";
+            }
+        }
+    }
+    console.log(myArray);
+    for (var i = 0; i < rows; i++) {
+        document.write(myArray[i] + "<br/>");
+    }
+    
+
+// 4. Создать два произвольных массива: один массив - любимая спортивная команда / модели автомобилей / города, во втором - количество игроков в команде / объем двигателя / количество жителей в городе. Объединить данные из двух массивов и вывести их в одну строку. 
+    
+    var myArray = ["Subaru", "Volvo", "BMW", "Ford", "Skoda", "Lexus", "Honda"];
+    var myArray2 = [2, 3, 4, 6, 7];
+    var s = myArray.concat(myArray2);
+    var changedmyArray2 = s.join(" / ");
+    document.write(changedmyArray2);
+
+    </script>
+</body>
+</html>
