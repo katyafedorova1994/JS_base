@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>practise_lesson_5</title>
+</head>
+<body>
+
+     <script>
+// 1. Обрезать строку (первый аргумент), если она длиннее заданной максимальной длины строки (второй аргумент). Вернуть усеченную строку с ... окончанием.
+// function truncateString(str, num) {
+// // Clear out that junk in your trunk
+// return str;
+// }
+// truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+        // function truncateString(str, num) {
+        //     if (str.length > num) {
+        //         var a = str.slice(0, num);
+        //         return a + "...";
+        //     } 
+        //     return str;
+        // }
+        // var result = truncateString("A-tisket a-tasket A green and yellow basket", 8);
+        // console.log(result);
+
+
+// 2. Создайте функцию, которая просматривает массив (первый аргумент) и возвращает первый элемент в массиве, который проходит проверку на истинность (второй аргумент). Если ни один элемент не проходит тест, вернуть undefined.
+// function findElement(arr, func) {
+// var test = 0;
+// if(func(test)){
+//     return test;
+// }
+// return num;
+// }
+// findElement([1, 2, 3, 4], function(num) {return num % 2 === 0} );
+
+        // function findElement(arr, func) {
+        // var num = 0;
+        //     for(var i = 0; i < arr.length; i++) {
+        //         if(func(arr[i]) === true) {
+        //             num = arr[i];
+        //             return num;
+        //         }
+        //     }
+        //     return undefined;
+        // }
+        // console.log(findElement([1, 2, 3, 4], function(num){ return num % 2 === 0; }));
+
+
+// 3. Проверьте, классифицировано ли значение как логический примитив. Верните true или false.
+// Булевы примитивы истинны и ложны.
+// function booWho(bool) {
+// return bool;
+// }
+// booWho(null); 
+
+        // function booWho(bool) {
+        //     if (bool === true || bool === false) {
+        //         return true
+        //     } 
+        //     else {
+        //         return false
+        //     }
+        // }
+        // console.log(booWho(null)); //false
+
+        // function booWho(bool) {
+        //     return typeof bool === "boolean";
+        // }
+        // console.log(booWho(null)); //false
+
+
+// 4. Напишите код, выполнив задание из каждого пункта отдельной строкой:
+//     Создайте пустой объект user.
+//     Добавьте свойство name со значением John.
+//     Добавьте свойство surname со значением Smith.
+//     Измените значение свойства name на Pete.
+//     Удалите свойство name из объекта.
+
+        // var user = {
+        // }
+        // // console.log(user);
+        // user.name = "John";
+        // // console.log(user);
+        // user.surname = "Smith";
+        // // console.log(user);
+        // user.name = "Pete";
+        // // console.log(user);
+        // delete user.name;
+        // console.log(user);//{surname: "Smith"}
+
+
+// 5. Напишите функцию isEmpty(obj), которая возвращает true, если у объекта нет свойств, иначе false.
+
+        // var result = {
+        //     test: "test",
+        // };
+        // function isEmpty(obj) {
+        // for (var a in result) {
+        //     return false;
+        // }
+        // return true;
+        // }
+        // console.log(isEmpty(result));//false
+        // console.log(result);//{test: "test"}
+
+
+
+     
+
+
+     </script>
+</body>
+</html>

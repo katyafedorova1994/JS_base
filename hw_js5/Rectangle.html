@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rectangle</title>
+    <style>
+        #block{
+            width: 50px;
+            height: 50px;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            BackgroundColor
+            <input type="color" id="backgroundColor"  value="#FFFF00" oninput="onRangeChange()">
+            <span id="c"></span>
+        </p>
+        <p>
+            Width
+            <input type="range" id="width" value="0" min="50" max="300" oninput="onRangeChange()">
+            <span id="ttl">50</span>
+        </p>
+        <p>
+            Height
+            <input type="range" id="height" value="0" min="50" max="300" oninput="onRangeChange()">
+            <span id="ttr">50</span>
+        </p>
+                                      
+    </div>
+
+    <div id="block"></div>
+
+    <script>
+        function onRangeChange(){
+            // find values from inputs
+            var backgroundColor = document.getElementById("backgroundColor").value;
+            var width = document.getElementById('width').value;
+            var height = document.getElementById('height').value;
+         
+
+            // find text from spans
+            var c = document.getElementById('c');
+            var ttl = document.getElementById('ttl');
+            var ttr = document.getElementById('ttr');
+           
+
+            // // sets values from range inputs to spans
+            c.innerHTML = backgroundColor;
+            ttl.innerHTML = width;
+            ttr.innerHTML = height;
+           
+     
+            var block = document.getElementById('block');
+
+            block.style.backgroundColor = backgroundColor;
+            block.style.height = height + "px ";
+            block.style.width = width + "px ";
+            
+        }
+    </script>
+</body>
+</html>
