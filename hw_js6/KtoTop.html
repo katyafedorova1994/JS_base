@@ -18,38 +18,24 @@
 	</div>
 	<script>
 
+		var toTop;
+  		function addTag() {
+			toTop = document.createElement("button");
+			toTop.id = "toTopId";
+			toTop.innerHTML = "top";
+			toTop.style.position = "fixed";
+			toTop.style.bottom = "50px";
+			toTop.style.right = "80px";
+			toTop.style.backgroundColor = "yellow";
+			toTop.style.cursor = "pointer";
+		 	toTop.style.display = "none";
+			document.body.appendChild(toTop);	
+		  }
+		  addTag();
 
-		// window.onload = addTag;
-
-  		// function addTag() {
-		// 	var toTop = document.createElement("button");
-		// 	toTop.id = "toTopId";
-		// 	toTop.innerHTML = "top";
-		// 	toTop.style.position = "fixed";
-		// 	toTop.style.bottom = "50px";
-		// 	toTop.style.right = "80px";
-		// 	toTop.style.backgroundColor = "yellow";
-		// 	toTop.style.cursor = "pointer";
-		//  	toTop.style.display = "block";
-		// 	document.body.appendChild(toTop);	
-  		// }
-
-		var toTop = document.createElement("button");
-		toTop.id = "toTopId";
-		toTop.innerHTML = "top";
-		toTop.style.position = "fixed";
-		toTop.style.bottom = "50px";
-		toTop.style.right = "80px";
-		toTop.style.backgroundColor = "yellow";
-		toTop.style.cursor = "pointer";
-		toTop.style.display = "none";
-		document.body.appendChild(toTop);
-
-	
 
 		toTop = document.querySelector('#toTopId');
 			
-
 		toTop.addEventListener('click', function(){
 			window.scrollTo({top: 0, behavior: 'smooth'});
 		});
@@ -63,12 +49,6 @@
 			}
 		}
 		window.onscroll = Scroll;
-
-			
-		
-
-
-
 	
 	</script>
 </body>

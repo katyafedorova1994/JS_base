@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>KModal</title>
+	<style>
+		.wrapper{
+			width: 800px;
+			margin: 0 auto;
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<h1>Modal window</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae delectus sit voluptas quaerat magni, reiciendis dolor similique nulla. Molestias quasi labore aspernatur maiores quae dolor minus expedita, deleniti repudiandae accusantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae delectus sit voluptas quaerat magni, reiciendis dolor similique nulla. Molestias quasi labore aspernatur maores quae </p>
+	</div>
+	<script>
+		
+
+		var bShowmodal;
+  		function addTag() {
+			bShowmodal = document.createElement("button");
+			bShowmodal.id = "bShowmodalId";
+			bShowmodal.innerHTML = "login";
+			bShowmodal.style.position = "fixed";
+			bShowmodal.style.top = "80px";
+			bShowmodal.style.right = "80px";
+			bShowmodal.style.backgroundColor = "yellow";
+			bShowmodal.style.cursor = "pointer";
+			bShowmodal.style.display = "block";
+			document.body.appendChild(bShowmodal);	
+		  }
+		  addTag();
+
+
+		var modal;
+  		function addTagModal() {
+			modal = document.createElement("div");
+			modal.id = "modalId";
+			modal.style.width = "350px";
+			modal.style.height = "200px";
+			modal.style.border = "1px solid black";
+			modal.style.display = "none";
+			modal.style.position = "relative";
+			modal.style.margin = "0px auto";
+			document.body.appendChild(modal);	
+		  }
+		  addTagModal();
+
+
+		var bClosemodal;
+  		function addTagClose() {
+			bClosemodal = document.createElement("button");
+			bClosemodal.id = "bClosemodalId";
+			bClosemodal.innerHTML = "close";
+			bClosemodal.style.backgroundColor = "red";
+			bClosemodal.style.cursor = "pointer";
+			bClosemodal.style.display = "block";
+			modal.appendChild(bClosemodal);//dobavili knopky v modalnyi div
+		  }
+		addTagClose();
+
+
+		bShowmodal = document.querySelector('#bShowmodalId');
+		modal = document.querySelector('#modalId');
+		bClosemodal = document.querySelector("#bClosemodalId");
+		
+		bShowmodal.addEventListener('click', function(){
+			modal.style.display = "block";
+			document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+			bClosemodal.style.display = "block";
+
+		});
+
+		bClosemodal.addEventListener('click', function(){
+			modal.style.display = "none";
+			document.body.style.backgroundColor = "#fff";
+		});
+
+
+
+
+		  
+
+		
+
+			
+		
+
+
+
+	
+	</script>
+</body>
+</html>
